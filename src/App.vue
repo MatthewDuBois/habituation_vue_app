@@ -29,3 +29,17 @@
   color: #42b983;
 }
 </style>
+
+<script>
+var axios = require('axios')
+
+export default {
+  methods: {
+    logout: function() {
+      delete axios.defaults.headers.common["Authorization"];
+      localStorage.removeItem("jwt");
+      this.$router.push("/login");
+    }
+  }
+}
+</script>
