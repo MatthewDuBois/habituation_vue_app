@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">what the actual fuck is this shit homie....</router-link> |
+      <router-link to="/">Hey Hey better to burn out than to fade away....</router-link> 
     </div>
     <router-view/>
   </div>
