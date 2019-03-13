@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="signup">
     <div class="container">
       <form v-on:submit.prevent="submit()">
         <h1>Signup</h1>
@@ -52,7 +52,7 @@ export default {
             axios
               .post("/api/avatars", params)
               .then(response => {
-                this.$router.push("/main");
+                this.$router.push("/login");
               })
               .catch(error => {
                 this.errors = error.response.data.errors;
