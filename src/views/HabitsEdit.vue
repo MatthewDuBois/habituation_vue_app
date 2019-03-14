@@ -7,18 +7,18 @@
       <li v-for="error in errors"> {{ error }} </li>
     </ul>
 
-    <!-- <div class="form-group">
+    <div class="form-group">
       <label>Name:</label> 
-      <input type="text" class="form-control" v-model="name">
+      <input type="text" class="form-control" v-model="habit.name">
     </div>
     <div class="form-group">
       <label>Description:</label>
-      <input type="description" class="form-control" v-model="description">
+      <input type="description" class="form-control" v-model="habit.description">
     </div>
     <div class="form-group">
       <label>Points:</label>
-      <input type="points" class="form-control" v-model="points">
-    </div> -->
+      <input type="points" class="form-control" v-model="habit.points">
+    </div>
 
     <div class='container'>
       <h2 v-model="habit.name">Edit habit: </h2>
