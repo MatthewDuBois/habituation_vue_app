@@ -16,8 +16,8 @@
       <input type="description" class="form-control" v-model="habit.description">
     </div>
     <div class="form-group">
-      <label>Points:</label>
-      <input type="points" class="form-control" v-model="habit.points">
+      <label>Difficulty:</label>
+      <input type="difficulty" class="form-control" v-model="habit.difficulty">
     </div>
 
     <div class='container'>
@@ -49,7 +49,7 @@ export default {
                     name: "",
                     description: "",
                     active: "",
-                    points: "",
+                    difficulty: "",
                     routine_time_increment: "",
                     routine_time_quantity: "",
                     avatar_id: ""
@@ -68,8 +68,7 @@ export default {
       var params = {
                     name: this.habit.name,
                     description: this.habit.description,
-                    active: this.habit.active,
-                    points: this.habit.points,
+                    difficulty: this.habit.difficulty,
                     routine_time_quantity: this.habit.routine_time_quantity,
                     routine_time_increment: this.habit.routine_time_increment
                     // avatar_id: this.habit.avatar_id

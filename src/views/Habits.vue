@@ -2,9 +2,31 @@
   <div class="habits">
 
     <h2>Here are your habits...</h2>
+    <br>
     <div v-for="habit in habits">
       <div class="container">
         <h1> {{ habit.name }}</h1>
+        <h4> {{ habit.description }}</h4>
+        <div v-for="habit_completed in habit.habit_completeds">
+          <h5>{{ habit_completed.created_at }}</h5>
+          
+        </div>
+       <!--  <div>
+          <button class="btn btn-primary btn-sm" type="button">completed?</button>
+        </div>   -->
+
+      <div class='container'>
+        <!-- <h5 v-model="newHabitCompleted"></h5> -->
+        <form v-on:submit.prevent="completed(habit)">
+          <div class="new-button">
+            <input type="submit" value="completed?" class="btn btn-success btn-sm">
+          </div>
+        </form>
+      </div>  
+        
+        <br>
+
+
       </div>
     </div>
 
@@ -24,18 +46,14 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-        habits: [],
+        habits: [{
+                  habit_completeds: [{
+                    created_at: ""
+                  }]
 
-      // habit: {
-      //               habit_id: "",
-      //               name: "",
-      //               description: "",
-      //               active: "",
-      //               points: "",
-      //               routine_time_increment: "",
-      //               routine_time_quantity: "",
-      //               avatar_id: ""
-      //             },
+                }],
+ 
+                
       errors: []
     };
   },
@@ -45,5 +63,20 @@ export default {
         this.habits = response.data;
       })
   },
+  methods: {
+    completed: function(inputHabit) {
+      var params = {
+                    habit_id: inputHabit.id
+                    };
+                    
+      axios.post("/api/habit_completeds/", params)
+        .then(response => {
+          this.habit = response.data;
+          this.$router.push("/habits");
+        }).catch(error => {
+          this.errors = error.response.data.errors;
+        });
+    }
+  }
 }
 </script>
