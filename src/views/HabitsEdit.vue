@@ -52,7 +52,9 @@ export default {
                     difficulty: "",
                     routine_time_increment: "",
                     routine_time_quantity: "",
-                    avatar_id: ""
+                    avatar_id: "",
+                    gold: "",
+                    xp: ""
                   },
       errors: []
     };

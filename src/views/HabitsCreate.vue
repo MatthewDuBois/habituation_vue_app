@@ -68,8 +68,6 @@ export default {
                     newDescription: "",
                     newActive: "",
                     newDifficulty: "",
-                    newRoutineTimeIncrement: "",
-                    newRoutineTimeQuantity: "",
       errors: []
     };
   },
