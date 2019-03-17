@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Hey Hey better to burn out than to fade away....</router-link> 
+      <router-link to="/">Is this a nav bar???? Going nowhere???</router-link> 
     </div>
     <router-view/>
   </div>
@@ -24,9 +24,6 @@
   color: #2c3e50;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
 
 <script>

@@ -15,13 +15,33 @@
       <label>Description:</label>
       <input type="description" class="form-control" v-model="newDescription">
     </div>
-    <div class="form-group">
-      <label>Points:</label>
-      <input type="points" class="form-control" v-model="newPoints">
-    </div>
+
+    <div>
+      <label>Difficulty:</label>
+      <br>
+      <select v-model="newDifficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>  
+
+
+<!--     <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-model="newDifficulty">
+        Difficulty
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" value="easy" href="#">Easy</a>
+        <a class="dropdown-item" value="medium" href="#">Medium</a>
+        <a class="dropdown-item" value="hard" href="#">Hard</a>
+      </div>
+    </div>  -->
+    
+    <br>
 
     <div class='container'>
-      <h2 v-model="newName">Create habit: </h2>
+      <h5 v-model="newName">Create habit: </h5>
       <form v-on:submit.prevent="create()">
        
         <div class="new-button">
@@ -47,9 +67,7 @@ export default {
                     newName: "",
                     newDescription: "",
                     newActive: "",
-                    newPoints: "",
-                    newRoutineTimeIncrement: "",
-                    newRoutineTimeQuantity: "",
+                    newDifficulty: "",
       errors: []
     };
   },
@@ -64,7 +82,7 @@ export default {
       var params = {
                     name: this.newName,
                     description: this.newDescription,
-                    points: this.newPoints
+                    difficulty: this.newDifficulty,
                     // routine_time_quantity: this.routine_time_quantity,
                     // routine_time_increment: this.routine_time_increment
                     // avatar_id: this.habit.avatar_id
