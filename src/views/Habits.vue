@@ -4,8 +4,7 @@
     <br>
     <div v-for="habit in habits">
       <div class="container">
-
-        router-link <h1>{{ habit.name }}</h1>
+        <h1>{{ habit.name }}</h1>
         <h4> {{ habit.description }}</h4>
         <div v-for="habit_completed in habit.habit_completeds">
           <h5>{{ habit_completed.created_at }}</h5>

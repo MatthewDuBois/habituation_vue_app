@@ -41,7 +41,7 @@ export default {
     return {
       email: "",
       password: "",
-      user_id: "",
+      avatar_id: "",
       errors: []
     };
   },
@@ -50,7 +50,7 @@ export default {
       var params = {
         email: this.email,
         password: this.password,
-        user_id: this.user_id
+        avatar_id: this.avatar_id
       };
       axios.post("/api/sessions", params)
         .then(response => {

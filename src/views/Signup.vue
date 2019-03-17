@@ -38,6 +38,9 @@ export default {
       email: "",
       password: "",
       passwordConfirmation: "",
+      xp_total: 0,
+      gold_total: 0,
+      level: 1,
            errors: []
           };
         },
