@@ -1,7 +1,9 @@
 <template>
   <div class="habits">
 
-    <h2>Here are your habits...</h2>
+    <div class="greeting">
+    <h2>Your Habits</h2>
+    </div>
     <br>
     <div v-for="habit in habits">
       <div class="container">
@@ -29,6 +31,15 @@
 
 
 <style>
+
+.container {
+  text-align: center;
+
+}
+.greeting{
+  text-align: center;
+  text-decoration: underline;
+}
 
 </style>
 

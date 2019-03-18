@@ -1,26 +1,26 @@
 <template>
   <div id="app">
-  <div id="loader-wrapper">
+<!--   <div id="loader-wrapper">
       <div id="loader"></div>
       <div class="loader-section section-left"></div>
       <div class="loader-section section-right"></div>
-  </div>  
+  </div>   -->
   <header id="header">
     <nav class="navbar navbar-expand-md navbar-light bg-faded cripto_nav">
       <div class="container">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
+        <img class="logo" src="/images/iso-H-small.png">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a data-scroll href="#header-01" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a data-scroll href="#about_cryptonic_01" class="nav-link">About</a></li>
-                <li class="nav-item"><a data-scroll href="#subscribe_area_01" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-        <div class="language">
-          <a href="#" class="token active">Sign Up...</a>
-          <a href="#" class="token">Login</a>
+           <div class="language">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"><a data-scroll href="/" class="nav-link active">Home</a></li>
+                  <li class="nav-item"><a data-scroll href="/signup" class="nav-link">Sign Up</a></li>
+                  <li class="nav-item"><a data-scroll href="/login" class="nav-link">Login</a></li>
+                  <li class="nav-item"><a data-scroll href="/logout" class="nav-link">Logout</a></li>
+              </ul>
+            </div>
         </div>
       </div>
     </nav>
@@ -29,37 +29,18 @@
 
   <router-view/>
 
-  <footer id="footer-01" >
+  <footer id="footer-01">
     <div class="container">
       <div class="row footer-btm-wrapper">
         <div class="col-sm-12 col-sm-12">
           <div class="footer_items">
-            <div class="footer-single-col footer_single_list_1"></div>
-              <div class="footer-single-col footer_single_list_2">
+              <div class="footer-single-col footer_single_list_1">
                 <h3 class="subtitle_1">Habituation</h3> 
                 <ul class="list-unstyled">
                   <li><a href="#">Contact</a></li>
                   <li><a href="#">About Us</a></li>
                 </ul>
               </div>
-
-              <div class="footer-single-col footer_single_list_3">
-                <h3 class="subtitle_1">Community</h3>
-                <ul class="list-unstyled">
-                  <li><a href="#">Contribute</a></li>
-                  <li><a href="#">Wikia</a></li>
-                </ul>
-              </div>
-
-   <!--          <div class="footer-single-col footer_single_list_4">
-              <h3 class="subtitle_1">Product</h3>
-                <ul class="list-unstyled">
-                  <li><a href="#">Consumer</a></li>
-                  <li><a href="#">Terms Condition</a></li>
-                  <li><a href="#">Help & Faq</a></li>
-                  <li><a href="#">Priceing</a></li>
-                </ul>
-              </div> -->
             </div>                  
           </div>
         </div>
@@ -77,7 +58,9 @@
 </template>
 
 <style>
-
+.logo{
+  width: 50px;
+}
 
 </style>
 

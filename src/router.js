@@ -7,6 +7,7 @@ import Habits from "./views/Habits.vue";
 import HabitsEdit from "./views/HabitsEdit.vue";
 import HabitsCreate from "./views/HabitsCreate.vue";
 import Logout from './views/Logout.vue';
+import AvatarHome from './views/AvatarHome.vue';
 
 
 Vue.use(Router)
@@ -21,6 +22,7 @@ export default new Router({
           { path: "/signup", name: "signup", component: Signup },
           { path: "/habits", name: "habits", component: Habits },
           { path: "/habits/:id/edit", name: "habits-edit", component: HabitsEdit },
-          { path: "/habits/create", name: "habits-create", component: HabitsCreate }
+          { path: "/habits/create", name: "habits-create", component: HabitsCreate },
+          { path: "/avatarhome", name: "avatar-home", component: AvatarHome }
           ]
 })
