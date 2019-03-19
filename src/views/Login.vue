@@ -1,5 +1,10 @@
 <template>
   <div class="login">
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>  
     <div class="container">
       <form v-on:submit.prevent="submit()">
         <h1>Login</h1>
@@ -41,7 +46,7 @@ export default {
     return {
       email: "",
       password: "",
-      user_id: "",
+      avatar_id: "",
       errors: []
     };
   },
@@ -50,14 +55,14 @@ export default {
       var params = {
         email: this.email,
         password: this.password,
-        user_id: this.user_id
+        avatar_id: this.avatar_id
       };
       axios.post("/api/sessions", params)
         .then(response => {
           axios.defaults.headers.common["Authorization"] =
             "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
-          this.$router.push("/");
+          this.$router.push("/avatarhome");
         })
         .catch(error => {
           this.errors = ["Invalid email or password."];

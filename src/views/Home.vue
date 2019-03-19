@@ -1,12 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    
-    <p>this is a home page for all you homies</p>
+    <div class="container">
+          <div class="row intro-wrapper">  
+              <div class="col-sm-12  col-md-12 col-lg-6 intro-text-wrapper">
+                  <div class="intro-text">
+                      <h1>Habituation</h1>
+                      <p>Become the best version of yourself</p>
+                      <img src="images/iso-H.jpg">
+                  </div>
+              </div> 
+          </div>   
+      </div>
   </div>
 </template>
 
+
+<style>
+img{
+  width: 300px;
+}
+
+</style>
+
+
 <script>
+import axios from "axios";
 
 
 export default {
