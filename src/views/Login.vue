@@ -28,12 +28,7 @@
 </template>
 
 <style>
-h1{
-  text-align: center
-}
-.button_login{
-  text-align: center
-}
+
   
 </style>
 

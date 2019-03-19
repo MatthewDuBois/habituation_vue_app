@@ -77,6 +77,10 @@ export default {
         .then(response => {
           this.habit = response.data;
           this.$router.push("/habits");
+          axios.get("/api/habits/")
+          .then(response => {
+        this.habits = response.data;
+      })
         }).catch(error => {
           this.errors = error.response.data.errors;
         });

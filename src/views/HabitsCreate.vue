@@ -1,7 +1,8 @@
 <template>
   <div class="habits-create">
 
-    <h2>Please create a new habit to work towards improving your life...</h2>
+    <h2>Create a new habit
+    <br> to work towards improving your life...</h2>
 
     <ul>
       <li v-for="error in errors"> {{ error }} </li>
@@ -11,7 +12,7 @@
       <label>Name:</label> 
       <input type="text" class="form-control" v-model="newName">
     </div>
-    <div class="form-group">
+    <div class="form-group1">
       <label>Description:</label>
       <input type="description" class="form-control" v-model="newDescription">
     </div>
@@ -54,6 +55,13 @@
 
 
 <style>
+.form-group{
+  width: 400px;
+}
+
+.form-group1{
+  width: 800px;
+}
 
 </style>
 
