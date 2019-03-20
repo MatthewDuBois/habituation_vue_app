@@ -1,38 +1,53 @@
 <template>
   <div class="home">
     <div class="container">
-          <div class="row intro-wrapper">  
-              <div class="col-sm-12  col-md-12 col-lg-4 intro-text-wrapper">
-                  <div class="intro-text">
-                      <h1>Habituation</h1>
-                      <p>Become the best version of yourself</p>
-                      <img src="images/iso-H.jpg">
-                  </div>
-                  <div class="habit-links">
-                    <ul class="list-unstyled">
-                      <li><a href="/habits">List Habits</a></li>
-                      <li><a href="/habits/create">Create a new Habit</a></li>
-                    </ul>
-                  </div>
-                  <div v-for="avatar in avatars">
-                    <div v-if="avatar_id == avatar.id">
-                      <div class="container">Gold: {{avatar.gold_total}}</div> 
-                      <div class="container">XP: {{avatar.xp_total}}</div> 
-                      <div class="container">Level: {{avatar.level}}</div> 
-                      <div class="container">Class: {{avatar.avatar_class.toUpperCase()}}</div> 
-                    </div>
-                  </div>
-              </div> 
-          </div>   
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="col-sm-8 col-md-6 col-lg-5 intro-text-wrapper">
+              <div class="intro-text">
+                <br>
+                  <h1>H@bituation</h1>
+                  <p>Become the best version of yourself</p>
+                  <img src="images/cyberpunk-street.png">
+              </div>
+              <div class="habit-links">
+                <ul class="list-unstyled">
+                  <li><a href="/habits">List Habits</a></li>
+                  <li><a href="/habits/create">Create a new Habit</a></li>
+                </ul>
+              </div>
+              <div v-for="avatar in avatars">
+                <div v-if="avatar_id == avatar.id">
+                  <div class="container">Gold: {{avatar.gold_total}}</div> 
+                  <div class="container">XP: {{avatar.xp_total}}</div> 
+                  <div class="container">Level: {{avatar.level}}</div> 
+                  <div class="container">Class: {{avatar.avatar_class.toUpperCase()}}</div> 
+                </div>
+              </div>
+          </div>
+        </div> 
+        <div class="col-sm-6">
+          <br>
+          <br>
+          <br>
+          <h3>Your Avatar</h3>
+          <img class="industrial" src="images/industrial.png">
+        </div>
       </div>
-  </div>
+      </div>
+  </div>  
 </template>
 
 
 <style>
 
+  .industrial{
+    : inline;
+    align-self: right;
+  }
+
   img{
-    width: 300px;
+    width: 350px;
       }
 
   a{ 
