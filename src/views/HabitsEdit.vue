@@ -28,6 +28,13 @@
           <input type="submit" value="click me..." class="btn btn-primary">
         </div>
       </form>
+      <br>
+      <div class="habit-links">
+        <ul class="list-unstyled">
+          <li><a href="/avatarhome">Avatar Home</a></li>
+          <li><a href="/habits/create">Create Habit</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>

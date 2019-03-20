@@ -6,7 +6,9 @@
                   <div class="intro-text">
                       <h1>Habituation</h1>
                       <p>Become the best version of yourself</p>
-                      <img src="images/iso-H.jpg">
+                      <div class="container1">
+                        <img src="images/iso-H.jpg">
+                      </div>
                   </div>
               </div> 
           </div>   
@@ -16,6 +18,10 @@
 
 
 <style>
+  .container1{
+    
+  }
+
 img{
   width: 300px;
 }
