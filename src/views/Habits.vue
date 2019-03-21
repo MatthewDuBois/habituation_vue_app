@@ -1,6 +1,24 @@
 <template>
   <div class="habits">
-
+    <div class="col-sm-12">
+      <br>
+      <img class="industrial" src="images/cyberpunk-street.png">
+    </div>
+    <div class="container1">
+      <div class="col-sm-4">
+        <br>
+      <div v-for="avatar in avatars">
+        <div v-if="avatar_id == avatar.id">
+          <div class="container">XP: {{avatar.xp_total}}</div> 
+          <div class="container">Level: {{avatar.level}}</div> 
+          <div class="container">Gold: {{avatar.gold_total}}</div> 
+          <div class="container">Specialization: {{avatar.avatar_class.toUpperCase()}}</div> 
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="container">
+    <div class="col-sm-8 col-md-12 col-lg-12">
     <div class="greeting">
     <h2>Your Habits</h2>
     </div>
@@ -14,8 +32,7 @@
         <h4> {{ habit.description }}</h4>
         <div v-for="habit_completed in habit.habit_completeds">
           <h5>{{ habit_completed.created_at }}</h5>
-<!--           <button class="btn">Show Completed</button>
- -->        </div>
+        </div>
         <div class='container'>
           <form v-on:submit.prevent="completed(habit)">
             <div class="new-button">
@@ -23,18 +40,20 @@
             </div>
           </form>
         </div>  
-        <br>
       </div>
     </div>
   </div>
-
-
-
-   
+</div>
+</div>
 </template>
 
 
 <style>
+
+.industrial {
+  width: 750px;
+  height: 190px;
+}
 
 .container {
   text-align: center;
@@ -66,6 +85,18 @@ export default {
                   }]
 
                 }],
+                avatars: [
+                          {
+                            id: "",
+                            name: "",
+                            email: "",
+                            gold_total: "",
+                            xp_total: "",
+                            level: "",
+                            avatar_class: ""
+                          }
+                          ],
+                avatar_id: "",
                 
                 
       errors: []
@@ -75,7 +106,11 @@ export default {
     axios.get("/api/habits/")
       .then(response => {
         this.habits = response.data;
-      })
+      });this.avatar_id = localStorage.getItem("avatar_id");
+      axios.get("/api/avatars")
+        .then(response => {
+          this.avatars = response.data;
+        })
   },
   methods: {
     completed: function(inputHabit) {
