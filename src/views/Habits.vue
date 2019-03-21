@@ -11,8 +11,8 @@
         <div v-if="avatar_id == avatar.id">
           <div class="container">XP: {{avatar.xp_total}}</div> 
           <div class="container">Level: {{avatar.level}}</div> 
+          <div class="container">Path: {{avatar.path.toUpperCase()}}</div> 
           <div class="container">Gold: {{avatar.gold_total}}</div> 
-          <div class="container">Specialization: {{avatar.avatar_class.toUpperCase()}}</div> 
         </div>
       </div>
     </div>
@@ -30,9 +30,19 @@
       <div class="container">
         <router-link v-bind:to="'/habits/' + habit.id + '/edit'"><h1>{{ habit.name }}</h1></router-link>
         <h4> {{ habit.description }}</h4>
-        <div v-for="habit_completed in habit.habit_completeds">
+
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  </button>
+
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+     <div v-for="habit_completed in habit.habit_completeds">
           <h5>{{ habit_completed.created_at }}</h5>
         </div>
+    </div>
+  </div>
+
+
         <div class='container'>
           <form v-on:submit.prevent="completed(habit)">
             <div class="new-button">
@@ -51,8 +61,8 @@
 <style>
 
 .industrial {
-  width: 750px;
-  height: 190px;
+  width: 650px;
+  height: 160px;
 }
 
 .container {
@@ -93,7 +103,7 @@ export default {
                             gold_total: "",
                             xp_total: "",
                             level: "",
-                            avatar_class: ""
+                            path: ""
                           }
                           ],
                 avatar_id: "",
