@@ -28,38 +28,38 @@
               <div v-if="avatar_id == avatar.id">
 
                 <div class="container">
-                  <h4 v-model="newPhysicality">Physicality: {{avatar.physicality}}</h4>
-                  <button v-on:click="increase(avatar, 'physicality')" type="button" class="btn btn-outline-danger btn-sm">Increase
+                  <h4>Physicality: {{avatar.physicality}}</h4>
+                  <button v-on:click="increasePhys(avatar)" type="button" class="btn btn-outline-danger btn-sm">Increase
                   </button>
                 </div>
                 <br>
                 <div class="container">
-                  <h4 v-model="newIntelligence">Intelligence: {{avatar.intelligence}}</h4>
-                  <button v-on:click="increase(avatar, 'intelligence')" type="button" class="btn btn-outline-danger btn-sm">Increase
+                  <h4>Intelligence: {{avatar.intelligence}}</h4>
+                  <button v-on:click="increaseIntel(avatar)" type="button" class="btn btn-outline-danger btn-sm">Increase
                   </button>
                 </div> 
                 <br>
                 <div class="container">
-                  <h4 v-model="newHumility">Humility: {{avatar.humility}}</h4>
-                  <button v-on:click="increase(avatar, 'humility')" type="button" class="btn btn-outline-danger btn-sm">Increase
+                  <h4>Humility: {{avatar.humility}}</h4>
+                  <button v-on:click="increaseHum(avatar)" type="button" class="btn btn-outline-danger btn-sm">Increase
                   </button>
                 </div> 
                 <br>
                 <div class="container">
-                  <h4 v-model="newMindfulness">Mindfulness: {{avatar.mindfulness}}</h4>
-                  <button v-on:click="increase(avatar, 'mindfulness')" type="button" class="btn btn-outline-danger btn-sm">Increase
+                  <h4>Mindfulness: {{avatar.mindfulness}}</h4>
+                  <button v-on:click="increaseMind(avatar)" type="button" class="btn btn-outline-danger btn-sm">Increase
                   </button>
                 </div> 
                 <br>
                 <div class="container">
-                  <h4 v-model="newIntuition">Intuition: {{avatar.intuition}}</h4>
-                  <button v-on:click="increase(avatar, 'intuition')" type="button" class="btn btn-outline-danger btn-sm">Increase
+                  <h4>Intuition: {{avatar.intuition}}</h4>
+                  <button v-on:click="increaseIntuit(avatar)" type="button" class="btn btn-outline-danger btn-sm">Increase
                   </button>
                 </div> 
                 <br>
                 <div class='container'>
-                  <h5 >Save Changes:</h5>
-                  <form v-on:submit.prevent="submit()">
+                  <h6>Save Changes:</h6>
+                  <form v-on:submit.prevent="submit(avatar)">
                     <div class="new-button">
                       <input type="submit" value="submit" class="btn btn-info btn-sm">
                     </div>
@@ -85,10 +85,6 @@
     height: 300px;
   }
 
-  /*img{
-    width: 350px;
-      }*/
-
   a{ 
     text-decoration: underline;
     }
@@ -103,8 +99,8 @@ import axios from "axios";
 export default {
   data: function() {
       return {
-                avatars: [
-                          {
+                avatars: 
+                          [{
                             id: "",
                             name: "",
                             email: "",
@@ -117,14 +113,13 @@ export default {
                             humility: "",
                             intuition: "",
                             path: ""
-                          }
-                          ],
+                          }],
                 avatar_id: "",
-                newPhysicality: "",
-                newIntelligence: "",
-                newMindfulness: "",
-                newHumility: "",
-                newIntuition: "",
+                physicalityChange: false,
+                intelligenceChange: false,
+                mindfulnessChange: false,
+                humilityChange: false,
+                intuitionChange: false,
                 errors: []
       };
     },
@@ -136,18 +131,58 @@ export default {
         })
     },
     methods: {
-      increase: function(inputAvatar, inputString) {
-        inputAvatar[inputString] += 1;
+      increasePhys: function(avatar) {
+        avatar.physicality += 1;
+        this.physicalityChange = true;
       },
-      
+      increaseIntel: function(avatar) {
+        avatar.intelligence += 1;
+        this.intelligenceChange = true;
+      },
+      increaseMind: function(avatar) {
+        avatar.mindfulness += 1;
+        this.mindfulnessChange = true;
+      },
+      increaseHum: function(avatar) {
+        avatar.humility += 1;
+        this.humilityChange = true;
+      },
+      increaseIntuit: function(avatar) {
+        avatar.intuition += 1;
+        this.intuitionChange = true;
+      },
+
+      submit: function(avatar){
+        var params = {};
+
+        if (this.physicalityChange) {
+          params.physicality = avatar.physicality
+        }
+
+        if (this.intelligenceChange) {
+          params.intelligence = avatar.intelligence
+        }
+
+        if (this.mindfulnessChange) {
+          params.mindfulness = avatar.mindfulness
+        }
+
+        if (this.humilityChange) {
+          params.humility = avatar.humility
+        }
+
+        if (this.intuitionChange) {
+          params.intuition = avatar.intuition
+        }
                       
-        // axios.post("/api/habits/", params)
-        //   .then(response => {
-        //     this.$router.push("/habits");
-        //   }).catch(error => {
-        //     this.errors = error.response.data.errors;
-        //   });
-      
+
+        axios.patch("/api/avatars/" + avatar.id, params)
+          .then(response => {
+            this.$router.push("/avatarhome");
+          }).catch(error => {
+            this.errors = error.response.data.errors;
+          });
+      } 
     }
   }
 </script>

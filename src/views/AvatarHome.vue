@@ -102,21 +102,6 @@ export default {
           this.avatars = response.data;
         })
     },
-    methods: {
-      create: function() {
-        var params = {
-                      name: this.newName,
-                      description: this.newDescription,
-                      difficulty: this.newDifficulty
-                      };
-                      
-        axios.post("/api/habits/", params)
-          .then(response => {
-            this.$router.push("/habits");
-          }).catch(error => {
-            this.errors = error.response.data.errors;
-          });
-      }
-    }
+    methods: { }
   }
 </script>

@@ -21,27 +21,25 @@
     <div class="col-sm-8 col-md-12 col-lg-12">
     <div class="greeting">
     <h2>Your Habits</h2>
+    <a href="/avatarhome">avatar home</a>
     </div>
     <div class="text">
       <p>click habit title to edit habit</p>
-      <a href="/avatarhome">avatar home</a>
     </div> 
     <div v-for="habit in habits">
       <div class="container">
         <router-link v-bind:to="'/habits/' + habit.id + '/edit'"><h1>{{ habit.name }}</h1></router-link>
-        <h4> {{ habit.description }}</h4>
+        <h6>Description: {{ habit.description }}</h6>
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  </button>
-
-  <div class="collapse" id="collapseExample">
-    <div class="card card-body">
-     <div v-for="habit_completed in habit.habit_completeds">
-          <h5>{{ habit_completed.created_at }}</h5>
-        </div>
-    </div>
-  </div>
-
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">expand history
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+             <div v-for="habit_completed in habit.habit_completeds">
+                  <h5>{{ habit_completed.created_at }}</h5>
+                </div>
+            </div>
+          </div>
+         </button>
 
         <div class='container'>
           <form v-on:submit.prevent="completed(habit)">
@@ -71,12 +69,16 @@
 }
 .greeting{
   text-align: center;
-  text-decoration: underline;
+  text-decoration: italic;
 }
 
 .text{
   text-align: center;
   color: pink;
+}
+
+h5 {
+  color: black;
 }
 
 </style>
