@@ -18,13 +18,7 @@
               </div>
               <div v-for="avatar in avatars">
                 <div v-if="avatar_id == avatar.id">
-
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                    <div class="container">XP: {{avatar.xp_total}}</div> 
-                    </div>
-                  </div>
-
+                  <div class="container">XP: {{avatar.xp_total}}</div> 
                   <div class="container">Level: {{avatar.level}}</div> 
                   <div class="container">Path: {{avatar.path}}</div> 
                   <div class="container">Gold: {{avatar.gold_total}}</div> 
