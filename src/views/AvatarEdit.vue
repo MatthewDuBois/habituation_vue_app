@@ -110,7 +110,7 @@
           </div>
 
             <div>
-              <label>Choose your Path:</label>
+              <label>At level 4 you may choose your Path:</label>
               <br>
               <select v-model="newPath">
                 <option value="tech_guru">Tech-Guru</option>
@@ -123,7 +123,7 @@
  
 
           <div class='container'>
-            <form v-on:submit.prevent="update()">
+            <form v-on:submit.prevent="update(avatar)">
               <div class="new-button">
                 <input type="submit" value="click!" class="btn btn-info btn-sm">
               </div>
@@ -189,10 +189,10 @@ export default {
         })
     },
     methods: {
-      update: function() {
-        var params = {
-                      path: this.newPath,
-                      };
+      update: function(avatar) {
+        var params = {};
+          if (avatar.level >= 4) {
+            path: this.newPath};
                       
         axios.patch("/api/avatars/" + this.avatars_id, params)
           .then(response => {
