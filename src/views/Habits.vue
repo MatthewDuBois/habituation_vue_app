@@ -137,7 +137,11 @@ export default {
           axios.get("/api/habits/")
           .then(response => {
         this.habits = response.data;
-      })
+      });
+          axios.get('api/avatars')
+          .then(response => {
+            this.avatars = response.data;
+          });
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
