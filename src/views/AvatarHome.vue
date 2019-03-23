@@ -20,18 +20,25 @@
                 <div v-if="avatar_id == avatar.id">
                   <div class="container">XP: {{avatar.xp_total}}</div> 
                   <div class="container">Level: {{avatar.level}}</div> 
-                  <div class="container">Specialization: {{avatar.avatar_class.toUpperCase()}}</div> 
+                  <div class="container">Path: {{avatar.path}}</div> 
                   <div class="container">Gold: {{avatar.gold_total}}</div> 
                 </div>
               </div>
           </div>
         </div> 
-        <div class="col-sm-6">
-          <br>
-          <br>
-          <br>
-          <h3>Your Avatar</h3>
-          <img class="industrial2" src="images/industrial.png">
+        <div class="col-sm-3">
+          <h6>eventually a customizable sprite...</h6>
+          <img class="steamer" src="images/steamer.jpg">
+        </div>
+        <div v-for="avatar in avatars">
+          <div v-if="avatar_id == avatar.id">
+            <h4>Avatar Attributes:</h4>
+            <div class="container">Physicality: {{avatar.physicality}}</div> 
+            <div class="container">Intelligence: {{avatar.intelligence}}</div> 
+            <div class="container">Humility: {{avatar.humility}}</div> 
+            <div class="container">Mindfulness: {{avatar.mindfulness}}</div> 
+            <div class="container">Intuition: {{avatar.intuition}}</div> 
+          </div>
         </div>
       </div>
       </div>
@@ -45,9 +52,9 @@
     width: 350px;
   }
 
-  .industrial2 {
+  .steamer {
     width: 200px;
-    height: 400px;
+    height: 300px;
   }
 
   /*img{
@@ -76,7 +83,12 @@ export default {
                             gold_total: "",
                             xp_total: "",
                             level: "",
-                            avatar_class: ""
+                            physicality: "",
+                            intelligence: "",
+                            mindfulness: "",
+                            humility: "",
+                            intuition: "",
+                            path: ""
                           }
                           ],
                 avatar_id: "",
@@ -90,21 +102,6 @@ export default {
           this.avatars = response.data;
         })
     },
-    methods: {
-      create: function() {
-        var params = {
-                      name: this.newName,
-                      description: this.newDescription,
-                      difficulty: this.newDifficulty
-                      };
-                      
-        axios.post("/api/habits/", params)
-          .then(response => {
-            this.$router.push("/habits");
-          }).catch(error => {
-            this.errors = error.response.data.errors;
-          });
-      }
-    }
+    methods: { }
   }
 </script>
