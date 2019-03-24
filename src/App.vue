@@ -62,6 +62,12 @@
   width: 50px;
 }
 
+.navbar{
+  background-color: pink;
+  opacity: .75;
+}
+
+
 </style>
 
 <script>
