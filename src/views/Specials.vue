@@ -1,5 +1,5 @@
 <template>
-  <div class="levelUp">
+  <div class="specials">
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
@@ -12,63 +12,67 @@
               </div>
               <div v-for="avatar in avatars">
                 <div v-if="avatar_id == avatar.id">
-                  <div class="container">XP: {{avatar.xp_total}}</div> 
-                  <div class="container">Level: {{avatar.level}}</div> 
-                  <div class="container">Path: {{avatar.path}}</div> 
-                  <div class="container">Gold: {{avatar.gold_total}}</div> 
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                      <div class="container">Gratitude: {{avatar.gratitude}}</div> 
+                    </div>
+                  </div>
+                  <br>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                      <div class="container">Vigor: {{avatar.vigor}}</div> 
+                    </div>
+                  </div>
+                  <br>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                      <div class="container">Knowledge: {{avatar.knowledge}}</div> 
+                    </div>
+                  </div>
+                  <br>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                      <div class="container">Zen: {{avatar.zen}}</div> 
+                    </div>
+                  </div>
+
                 </div>
               </div>
               <a href="/avatarhome">avatar home</a>
           </div>
         </div> 
         <div class="col-sm-12 col-md-8 col-lg-5">
-            <h4>Current Attributes</h4>
+          <div class="container">
+            <br>
+            <h4>Attributes</h4>
+          </div>  
             <div v-for="avatar in avatars">
               <div v-if="avatar_id == avatar.id">
 
                 <div class="container">
-                  <h6>Points Available: {{avatar.points}}</h6>
-                </div>
-                <br>
-
-                <div class="container">
-                  <h4>Physicality: {{avatar.physicality}}</h4>
-                  <button v-on:click="increasePhys(avatar)" type="button" class="btn btn-outline-danger btn-sm">Increase
-                  </button>
+                  <h6>Physicality: {{avatar.physicality}}</h6>
+                  <p>description of what physicality does...</p>
                 </div>
                 <br>
                 <div class="container">
-                  <h4>Intelligence: {{avatar.intelligence}}</h4>
-                  <button v-on:click="increaseIntel(avatar)" type="button" class="btn btn-outline-danger btn-sm">Increase
-                  </button>
+                  <h6>Intelligence: {{avatar.intelligence}}</h6>
+                  <p>description of what intelligence does...</p>
                 </div> 
                 <br>
                 <div class="container">
-                  <h4>Humility: {{avatar.humility}}</h4>
-                  <button v-on:click="increaseHum(avatar)" type="button" class="btn btn-outline-danger btn-sm">Increase
-                  </button>
+                  <h6>Humility: {{avatar.humility}}</h6>
+                  <p>description of what humility does...</p>
                 </div> 
                 <br>
                 <div class="container">
-                  <h4>Mindfulness: {{avatar.mindfulness}}</h4>
-                  <button v-on:click="increaseMind(avatar)" type="button" class="btn btn-outline-danger btn-sm">Increase
-                  </button>
+                  <h6>Mindfulness: {{avatar.mindfulness}}</h6>
+                 <p>description of what container does...</p>
                 </div> 
                 <br>
                 <div class="container">
-                  <h4>Intuition: {{avatar.intuition}}</h4>
-                  <button v-on:click="increaseIntuit(avatar)" type="button" class="btn btn-outline-danger btn-sm">Increase
-                  </button>
+                  <h6>Intuition: {{avatar.intuition}}</h6>
+                  <p>description of what intuition does....</p>
                 </div> 
-                <br>
-                <div class='container'>
-                  <h6>Save Changes:</h6>
-                  <form v-on:submit.prevent="submit(avatar)">
-                    <div class="new-button">
-                      <input type="submit" value="submit" class="btn btn-info btn-sm">
-                    </div>
-                  </form>
-                </div>
               </div>
             </div>
         </div>
@@ -79,6 +83,14 @@
 
 
 <style>
+
+p{
+  color: pink;
+}
+
+.progress{
+  height: 50px;
+}
 
   .cyberpunk {
     width: 350px;

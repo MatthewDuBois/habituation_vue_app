@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
-          <div class="col-sm-8 col-md-6 col-lg-6 intro-text-wrapper">
+          <div class="col-sm-8 col-md-6 col-lg-7 intro-text-wrapper">
               <div class="intro-text">
                 <br>
                   <h1>Habituation</h1>
@@ -18,17 +18,20 @@
               </div>
               <div v-for="avatar in avatars">
                 <div v-if="avatar_id == avatar.id">
-                  <div class="container">XP: {{avatar.xp_total}}</div> 
-                  <div class="container">Level: {{avatar.level}}</div> 
+                  <div class="container">Current XP: {{avatar.xp_total}} / Level Up: {{avatar.level * 100}}</div> 
+                  <div class="container">Current Level: {{avatar.level}}</div> 
                   <div class="container">Path: {{avatar.path}}</div> 
                   <div class="container">Gold: {{avatar.gold_total}}</div> 
                 </div>
               </div>
+              <div><a href="/specials">All those extra things...</a></div>
           </div>
         </div> 
         <div class="col-sm-3">
           <h6>eventually a customizable sprite...</h6>
-          <img class="steamer" src="images/steamer.jpg">
+          <div id="spritesheet">
+            <img class="sprite" src="images/spritexb-2199.png">
+          </div>
         </div>
         <div v-for="avatar in avatars">
           <div v-if="avatar_id == avatar.id">
@@ -38,8 +41,11 @@
             <div class="container">Humility: {{avatar.humility}}</div> 
             <div class="container">Mindfulness: {{avatar.mindfulness}}</div> 
             <div class="container">Intuition: {{avatar.intuition}}</div> 
+            <div><a href="/levelup">change attributes</a></div>
+            <div><a href="/avataredit">choose path</a></div>
           </div>
         </div>
+
       </div>
       </div>
   </div>  
@@ -48,13 +54,19 @@
 
 <style>
 
+/*  #spritesheet {
+    width: 200px;
+    height: 300px;
+    background: url(images/spritexb-2199.png) 0 0;
+  }*/
+
   .cyberpunk {
     width: 350px;
   }
 
-  .steamer {
-    width: 200px;
-    height: 300px;
+  .sprite {
+    width: 180px;
+    height: 250px;
   }
 
   /*img{
@@ -88,7 +100,8 @@ export default {
                             mindfulness: "",
                             humility: "",
                             intuition: "",
-                            path: ""
+                            path: "",
+                            gratitude: ""
                           }
                           ],
                 avatar_id: "",
@@ -102,6 +115,7 @@ export default {
           this.avatars = response.data;
         })
     },
-    methods: { }
+    methods: {
+    }
   }
 </script>

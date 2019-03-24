@@ -10,6 +10,7 @@ import Logout from './views/Logout.vue';
 import AvatarHome from './views/AvatarHome.vue';
 import AvatarEdit from './views/AvatarEdit.vue';
 import LevelUp from './views/LevelUp.vue';
+import Specials from './views/Specials.vue';
 
 
 Vue.use(Router)
@@ -27,6 +28,7 @@ export default new Router({
           { path: "/habits/create", name: "habits-create", component: HabitsCreate },
           { path: "/avatarhome", name: "avatar-home", component: AvatarHome },
           { path: "/avataredit", name: "avatar-edit", component: AvatarEdit },
-          { path: "/levelup", name: "level-up", component: LevelUp }
+          { path: "/levelup", name: "level-up", component: LevelUp },
+          { path: "/specials", name: "specials", component: Specials }
           ]
 })

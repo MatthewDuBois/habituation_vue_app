@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="AvatarEdit">
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
@@ -120,7 +120,6 @@
                 <option value="ascetic_seer">Ascetic-Seer</option>
               </select>
             </div>  
- 
 
           <div class='container'>
             <form v-on:submit.prevent="update(avatar)">
@@ -128,7 +127,8 @@
                 <input type="submit" value="click!" class="btn btn-info btn-sm">
               </div>
             </form>
-            <a href="/avatarhome">avatar home</a>
+            <div><a href="/avatarhome">avatar home</a></div>
+            <div><a href="/levelup">change attributes</a></div>
           </div> 
           </div>
         </div>
