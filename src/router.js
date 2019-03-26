@@ -11,6 +11,7 @@ import AvatarHome from './views/AvatarHome.vue';
 import AvatarEdit from './views/AvatarEdit.vue';
 import LevelUp from './views/LevelUp.vue';
 import Specials from './views/Specials.vue';
+import Shop from './views/Shop.vue';
 
 
 Vue.use(Router)
@@ -29,6 +30,7 @@ export default new Router({
           { path: "/avatarhome", name: "avatar-home", component: AvatarHome },
           { path: "/avataredit", name: "avatar-edit", component: AvatarEdit },
           { path: "/levelup", name: "level-up", component: LevelUp },
-          { path: "/specials", name: "specials", component: Specials }
+          { path: "/specials", name: "specials", component: Specials },
+          { path: "/shop", name: "shop", component: Shop }
           ]
 })

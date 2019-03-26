@@ -73,6 +73,7 @@
 <script>
 var axios = require('axios')
 
+
 export default {
   methods: {
     logout: function() {

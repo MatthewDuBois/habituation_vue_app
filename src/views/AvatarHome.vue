@@ -28,13 +28,21 @@
           </div>
         </div> 
         <div class="col-sm-3">
-          <h6>eventually a customizable sprite...</h6>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h6>Your Avatar</h6>
           <div id="spritesheet">
-            <img class="sprite" src="images/spritexb-2199.png">
+            <img class="sprite" src="images/wizard.png">
           </div>
         </div>
         <div v-for="avatar in avatars">
           <div v-if="avatar_id == avatar.id">
+            <br>
+            <br>
+            <br>
+            <br>
             <h4>Avatar Attributes:</h4>
             <div class="container">Physicality: {{avatar.physicality}}</div> 
             <div class="container">Intelligence: {{avatar.intelligence}}</div> 
@@ -65,8 +73,8 @@
   }
 
   .sprite {
-    width: 180px;
-    height: 250px;
+    width: 150px;
+    height: 200px;
   }
 
   /*img{
