@@ -6,8 +6,8 @@
               <div class="intro-text">
                 <br>
                   <h1>Habituation</h1>
-                  <p>Become the best version <br> of yourself</p>
-                  <img class="cyberpunk1" src="images/cyberpunk-street.png">
+                  <p>Become the best version of yourself</p>
+                  <img class="cyberpunk9" src="images/cyberpunk-street.png">
               </div>
               <div v-for="avatar in avatars">
                 <div v-if="avatar_id == avatar.id">
@@ -100,7 +100,6 @@
 }
 
 .container8{
-  padding-left: 100px;
   align-self: right;}
  
 
@@ -117,8 +116,8 @@ p{
   width: 50%;
 }
 
-  .cyberpunk {
-    width: 350px;
+  .cyberpunk9 {
+    width: 650px;
   }
 
   a{ 

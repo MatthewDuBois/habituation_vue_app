@@ -57,12 +57,12 @@
             <br>
             <br>
             <h4>Avatar Attributes:</h4>
-            <div class="containe"><h3>Physicality: {{avatar.physicality}}</h3></div> 
-            <div class="containe"><h3>Intelligence: {{avatar.intelligence}}</h3></div> 
-            <div class="containe"><h3>Humility: {{avatar.humility}}</h3></div> 
-            <div class="containe"><h3>Mindfulness: {{avatar.mindfulness}}</h3></div> 
-            <div class="containe"><h3>Intuition: {{avatar.intuition}}</h3></div> 
-            <div><a href="/levelup">change attributes</a></div>
+            <div class="containe mt-1"><h3>Physicality: {{avatar.physicality}}</h3></div> 
+            <div class="containe mt-1"><h3>Intelligence: {{avatar.intelligence}}</h3></div> 
+            <div class="containe mt-1"><h3>Humility: {{avatar.humility}}</h3></div> 
+            <div class="containe mt-1"><h3>Mindfulness: {{avatar.mindfulness}}</h3></div> 
+            <div class="containe mt-1"><h3>Intuition: {{avatar.intuition}}</h3></div> 
+            <div class="btn"><a  href="/levelup">change attributes</a></div>
             <div class="modal1">
               <modal v-if="showModal">
                 <h4 slot="header" class="modal-title text-center">
@@ -187,7 +187,7 @@
                  </button>
                 </div>
               </modal>
-              <button @click="openModal()">Choose Path</button>
+              <button class="btn btn-md mt-2" @click="openModal()">Choose Path</button>
             </div>
           </div>
         </div>
@@ -237,7 +237,7 @@
   }
 
   .quote{
-    padding-left: 800px;
+    padding-left: 950px;
     color: pink;
   }
 
