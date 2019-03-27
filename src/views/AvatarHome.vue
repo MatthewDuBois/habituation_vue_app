@@ -57,11 +57,11 @@
             <br>
             <br>
             <h4>Avatar Attributes:</h4>
-            <div class="container"><h3>Physicality: {{avatar.physicality}}</h3></div> 
-            <div class="container"><h3>Intelligence: {{avatar.intelligence}}</h3></div> 
-            <div class="container"><h3>Humility: {{avatar.humility}}</h3></div> 
-            <div class="container"><h3>Mindfulness: {{avatar.mindfulness}}</h3></div> 
-            <div class="container"><h3>Intuition: {{avatar.intuition}}</h3></div> 
+            <div class="containe"><h3>Physicality: {{avatar.physicality}}</h3></div> 
+            <div class="containe"><h3>Intelligence: {{avatar.intelligence}}</h3></div> 
+            <div class="containe"><h3>Humility: {{avatar.humility}}</h3></div> 
+            <div class="containe"><h3>Mindfulness: {{avatar.mindfulness}}</h3></div> 
+            <div class="containe"><h3>Intuition: {{avatar.intuition}}</h3></div> 
             <div><a href="/levelup">change attributes</a></div>
             <div><a href="/avataredit">choose path</a></div>
           </div>

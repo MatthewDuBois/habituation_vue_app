@@ -5,7 +5,7 @@
       <br>
       <br>
       <h1>Habituation</h1>
-      <p>Become the best version <br> of yourself</p>
+      <p>Become the best version of yourself</p>
       <div class="container4">
         <br>
           <div class="greeting">
@@ -43,12 +43,13 @@
       </div>
     </div>
     <div class="col-sm-9">
-    <div class="image">
+    <div class="image7">
       <br>
       <br>
       <br>
       <br>
       <img class="skyline" src="images/pinkskyline.jpg">
+      </div>
       <div class="quote">
         <p>“…tomorrow and plans for tomorrow 
         <br>can have no significance at all 
@@ -56,7 +57,6 @@
         <br>of the present, since it is in the present 
         <br>and only in the present that you live.” 
         <br>– Alan Watts.</p>
-      </div>
       </div>
     </div>
    
@@ -70,7 +70,7 @@
 /*.row-2{
   padding-left: 650px;
 }*/
-.image {
+.image7 {
   padding-left: 400px;
 }
 
@@ -84,9 +84,9 @@
 
 }
 
-.quote{
+/*.quote{
   padding-right: 4px;
-}
+}*/
 
 .container4 {
   text-align: center;
