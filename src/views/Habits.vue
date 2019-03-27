@@ -1,12 +1,12 @@
 <template>
   <div class="habits">
     <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <br>
       <br>
       <h1>Habituation</h1>
       <p>Become the best version <br> of yourself</p>
-      <div class="container">
+      <div class="container4">
         <br>
           <div class="greeting">
             <h2>Your Habits</h2>
@@ -16,20 +16,20 @@
             <p>click habit title to edit habit</p>
           </div> 
           <div v-for="habit in habits">
-            <div class="container">
+            <div class="container4">
               <router-link v-bind:to="'/habits/' + habit.id + '/edit'"><h1>{{ habit.name }}</h1></router-link>
-                <h4>Description: {{ habit.description }}</h4>
+                <h5>Description: {{ habit.description }}</h5>
                   <button class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">expand history
                     <div class="collapse" id="collapseExample">
                       <div class="card card-body">
                        <div v-for="habit_completed in habit.habit_completeds">
-                            <h5>{{ habit_completed.created_at }}</h5>
+                            <p>{{ habit_completed.created_at }}</p>
                           </div>
                       </div>
                     </div>
                   </button>
 
-            <div class='container'>
+            <div class='container4'>
               <form v-on:submit.prevent="completed(habit)">
                 <br>
                 <div class="new-button">
@@ -42,12 +42,13 @@
         </div>
       </div>
     </div>
+    <div class="col-sm-9">
     <div class="image">
       <br>
       <br>
       <br>
       <br>
-      <img class="industrial" src="images/pinkskyline.jpg">
+      <img class="skyline" src="images/pinkskyline.jpg">
       <div class="quote">
         <p>“…tomorrow and plans for tomorrow 
         <br>can have no significance at all 
@@ -70,23 +71,24 @@
   padding-left: 650px;
 }*/
 .image {
-  padding-left: 300px;
+  padding-left: 400px;
 }
 
 .row{
   padding-left: 100px;
 }
 
-.industrial {
+.skyline {
   width: 400px;
+  float: left;
 
 }
 
 .quote{
-  padding-left: 34px;
+  padding-right: 4px;
 }
 
-.container {
+.container4 {
   text-align: center;
 }
 .greeting{
@@ -100,7 +102,7 @@
 }
 
 h5 {
-  color: black;
+  color: white;
 }
 
 </style>

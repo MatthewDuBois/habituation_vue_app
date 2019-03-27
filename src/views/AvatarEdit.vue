@@ -47,7 +47,7 @@
               </div>
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
-                  <p>Warrior Poets are passionate and creative fighters.  
+                  <p>Warrior Poets are passionate and creative fighters.
                   </p>
                 </div>
               </div>

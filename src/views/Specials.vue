@@ -38,6 +38,7 @@
                   </div>
                 </div>
               </div>
+              <br>
               <a href="/avatarhome">avatar home</a>
           </div>
         </div> 
@@ -45,33 +46,34 @@
           <div class="container">
             <br>
             <h4>Attributes</h4>
+            <br>
           </div>  
             <div v-for="avatar in avatars">
               <div v-if="avatar_id == avatar.id">
 
                 <div class="container">
-                  <h6>Physicality: {{avatar.physicality}}</h6>
-                  <p>Physicality increases power of melee skills, gives bonuses on health regeneration, increases resistance to bad habit sickness.</p>
+                  <h4>Physicality: {{avatar.physicality}}</h4>
+                  <h5>Physicality increases power of melee skills, gives bonuses on health regeneration, increases resistance to bad habit sickness.</h5>
                 </div>
-        
+                  <br>
                 <div class="container">
-                  <h6>Intelligence: {{avatar.intelligence}}</h6>
-                  <p>Intelligence increases power of alchemy skills, increases resistances to any intelligence based attacks, improves crafting.</p>
+                  <h4>Intelligence: {{avatar.intelligence}}</h4>
+                  <h5>Intelligence increases power of alchemy skills, increases resistances to any intelligence based attacks, improves crafting.</h5>
                 </div> 
-   
+                  <br>
                 <div class="container">
-                  <h6>Humility: {{avatar.humility}}</h6>
-                  <p>Humility affects your overall aura, those in your party receive bonuses on attributes and skills while enemy bosses are penalized.</p>
+                  <h4>Humility: {{avatar.humility}}</h4>
+                  <h5>Humility affects your overall aura, those in your party receive bonuses on attributes and skills while enemy bosses are penalized.</h5>
                 </div> 
-       
+                  <br>
                 <div class="container">
-                  <h6>Mindfulness: {{avatar.mindfulness}}</h6>
-                 <p>Mindfulness increases the power of source skills, all streak bonuses are increased, slows bad habit sickness.</p>
+                  <h4>Mindfulness: {{avatar.mindfulness}}</h4>
+                 <h5>Mindfulness increases the power of source skills, all streak bonuses are increased, slows bad habit sickness.</h5>
                 </div> 
-       
+                  <br>
                 <div class="container">
-                  <h6>Intuition: {{avatar.intuition}}</h6>
-                  <p>Intuition gives bonuses to all skills, increases chance of random loot drops and increased gold rewards.</p>
+                  <h4>Intuition: {{avatar.intuition}}</h4>
+                  <h5>Intuition gives bonuses to all skills, increases chance of random loot drops and increased gold rewards.</h5>
                 </div> 
               </div>
             </div>
@@ -83,6 +85,10 @@
 
 
 <style>
+
+h4{
+  color: pink;
+}
 
 p{
   color: pink;

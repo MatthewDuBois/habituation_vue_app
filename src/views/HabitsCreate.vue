@@ -8,7 +8,7 @@
         <li v-for="error in errors"> {{ error }} </li>
       </ul>
 
-      <div class="form-group">
+      <div class="form-group2">
         <label>Name:</label> 
         <input type="text" class="form-control" v-model="newName">
       </div>
@@ -42,7 +42,7 @@
 
 
 <style>
-.form-group{
+.form-group2{
   width: 400px;
 }
 
