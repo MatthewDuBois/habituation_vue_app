@@ -182,12 +182,12 @@
                 </div>
                 <div slot="footer" class="mt-3">
                  <button type="button" class="btn btn-outline-info mr-1" @click="closeModal()"> Close </button>
-                 <button type="button" class="btn btn-primary ml-1" data-dismiss="modal" @click="closeModal(); submit();">
+                 <button type="button" class="btn btn-info ml-1" data-dismiss="modal" @click="closeModal(); submit();">
                    Submit
                  </button>
                 </div>
               </modal>
-              <button class="btn btn-md mt-2" @click="openModal()">Choose Path</button>
+              <button class="btn btn-md btn-info mt-2" @click="openModal()">Choose Path</button>
             </div>
           </div>
         </div>

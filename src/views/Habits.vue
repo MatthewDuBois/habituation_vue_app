@@ -51,13 +51,14 @@
       <br>
       <img class="skyline" src="images/pinkskyline.jpg">
       </div>
-      <div class="quote">
+      <div class="quote2">
         <br>
         <br>
         <p>“…tomorrow and plans for tomorrow 
         can have no significance at all 
-        unless you are in full contact with the reality 
-        of the present, since it is in the present 
+       <br> unless you are in full contact with the reality 
+        of the present, since it is 
+        <br>in the present 
         and only in the present that you live.” 
         <br>– Alan Watts.</p>
       </div>
@@ -89,8 +90,8 @@
 
 }
 
-.quote{
-  padding-right: 300px;
+.quote2{
+  padding-left: 500px;
 }
 
 .container4 {
