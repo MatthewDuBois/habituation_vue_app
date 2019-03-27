@@ -63,7 +63,132 @@
             <div class="containe"><h3>Mindfulness: {{avatar.mindfulness}}</h3></div> 
             <div class="containe"><h3>Intuition: {{avatar.intuition}}</h3></div> 
             <div><a href="/levelup">change attributes</a></div>
-            <div><a href="/avataredit">choose path</a></div>
+            <div class="modal1">
+              <modal v-if="showModal">
+                <h4 slot="header" class="modal-title text-center">
+                    Paths
+                </h4>
+                <div slot="body" class="mb-3">
+
+                  <div class="g text-center pl-5">
+                    <h3>The Paths:</h3>
+                    <div class="accordion text-center" id="accordionExample">
+                      <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Tech-Guru
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <p>A futurist and visionary equally at home talking quantam mechanics or meditative stillness trying to combine the formless with invented form to create a better future by improving their present.  This path is one that benefits the most from intelligence and mindfullness.  
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwo">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Warrior-Poet
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThree">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Alchemist-Hunter
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingFour">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              Wanderlust-Hacker
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingFive">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              Ascetic-Seer
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label>At level 4 you may choose your Path:</label>
+                      <br>
+                      <select v-model="newPath">
+                        <option value="tech_guru">Tech-Guru</option>
+                        <option value="warrior_poet">Warrior-Poet</option>
+                        <option value="alchemist_hunter">Alchemist-Hunter</option>
+                        <option value="wanderlust_hacker">Wanderlust-Hacker</option>
+                        <option value="ascetic_seer">Ascetic-Seer</option>
+                      </select>
+                    </div>  
+
+                    <div class='container'>
+                      <form v-on:submit.prevent="update(avatar)">
+                        <div class="new-button">
+                          <input type="submit" value="click!" class="btn btn-info btn-sm">
+                        </div>
+                      </form>
+                    </div> 
+                  </div>
+
+                </div>
+                <div slot="footer" class="mt-3">
+                 <button type="button" class="btn btn-outline-info mr-1" @click="closeModal()"> Close </button>
+                 <button type="button" class="btn btn-primary ml-1" data-dismiss="modal" @click="closeModal(); submit();">
+                   Submit
+                 </button>
+                </div>
+              </modal>
+              <button @click="openModal()">Choose Path</button>
+            </div>
           </div>
         </div>
         <div class="quote">
@@ -82,15 +207,23 @@
 <style>
 
 
+/*.accordion{
+  width: 200px;
+}*/
+
 /*  #spritesheet {
     width: 200px;
     height: 300px;
     background: url(images/spritexb-2199.png) 0 0;
   }*/
 
+  .g{
+    padding-right: 50px;
+  }
+
   .card{
     border-color: pink;
-    width: 500px;
+ /*   width: 500px;*/
 
   }
 
@@ -121,9 +254,14 @@
 
 <script>
 import axios from "axios";
+import Modal from '../components/Modal.vue'
 
 
 export default {
+  components: {
+    Modal
+  },
+
   data: function() {
       return {
                 avatars: [
@@ -144,7 +282,8 @@ export default {
                           }
                           ],
                 avatar_id: "",
-                errors: []
+                errors: [],
+                showModal: false
       };
     },
     created: function() {
@@ -155,6 +294,25 @@ export default {
         })
     },
     methods: {
+      openModal: function() {
+      this.showModal = true;
+    },
+
+      closeModal: function() {
+      this.showModal = false;
+    },
+      update: function(avatar) {
+        var params = {};
+          if (avatar.level >= 4) {
+            path: this.newPath};
+                      
+        axios.patch("/api/avatars/" + this.avatars_id, params)
+          .then(response => {
+            this.$router.push("/avatarhome");
+          }).catch(error => {
+            this.errors = error.response.data.errors;
+          });
+      }
     }
-  }
+    }
 </script>

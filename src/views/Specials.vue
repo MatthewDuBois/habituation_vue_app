@@ -1,9 +1,9 @@
 <template>
   <div class="specials">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="col-sm-8 col-md-6 col-lg-6 intro-text-wrapper">
+    <div class="containe">
+  
+       
+          <div class="col-lg-6 intro-text-wrapper">
               <div class="intro-text">
                 <br>
                   <h1>Habituation</h1>
@@ -42,7 +42,7 @@
               <a href="/avatarhome">avatar home</a>
           </div>
         </div> 
-        <div class="col-sm-12 col-md-8 col-lg-5">
+        <div class="col-lg-5">
           <div class="container">
             <br>
             <h4>Attributes</h4>
@@ -70,7 +70,7 @@
                   <h4>Mindfulness: {{avatar.mindfulness}}</h4>
                  <h5>Mindfulness increases the power of source skills, all streak bonuses are increased, slows bad habit sickness.</h5>
                 </div> 
-                  <br>
+                  br
                 <div class="container">
                   <h4>Intuition: {{avatar.intuition}}</h4>
                   <h5>Intuition gives bonuses to all skills, increases chance of random loot drops and increased gold rewards.</h5>

@@ -12,6 +12,7 @@
             <h2>Your Habits</h2>
               <a href="/avatarhome">avatar home</a>
           </div>
+          <br>
           <div class="text">
             <p>click habit title to edit habit</p>
           </div> 
@@ -23,7 +24,7 @@
                     <div class="collapse" id="collapseExample">
                       <div class="card card-body">
                        <div v-for="habit_completed in habit.habit_completeds">
-                            <p>{{ habit_completed.created_at }}</p>
+                            <h4>{{ habit_completed.created_at }}</h4>
                           </div>
                       </div>
                     </div>
@@ -51,6 +52,8 @@
       <img class="skyline" src="images/pinkskyline.jpg">
       </div>
       <div class="quote">
+        <br>
+        <br>
         <p>“…tomorrow and plans for tomorrow 
         <br>can have no significance at all 
         <br>unless you are in full contact with the reality 
@@ -58,6 +61,7 @@
         <br>and only in the present that you live.” 
         <br>– Alan Watts.</p>
       </div>
+      <h3></h3>
     </div>
    
   </div>
