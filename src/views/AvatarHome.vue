@@ -62,7 +62,7 @@
             <div class="containe mt-1"><h3>Humility: {{avatar.humility}}</h3></div> 
             <div class="containe mt-1"><h3>Mindfulness: {{avatar.mindfulness}}</h3></div> 
             <div class="containe mt-1"><h3>Intuition: {{avatar.intuition}}</h3></div> 
-            <div class="btn"><a  href="/levelup">change attributes</a></div>
+            <div class="btn btn-md btn-info mt-1"><router-link to="/levelup">Change Attributes</router-link></div>
             <div class="modal1">
               <modal v-if="showModal">
                 <h4 slot="header" class="modal-title text-center">

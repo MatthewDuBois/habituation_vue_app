@@ -1,16 +1,17 @@
 <template>
   <div class="levelUp">
-    <div class="container">
+    <div class="contner">
       <div class="row">
         <div class="col-sm-6">
           <div class="col-sm-6">
               <div class="intro-text">
                 <br>
+                <br>
                   <h1>Habituation</h1>
-                  <p>Become the best version <br> of yourself</p>
-                  <img class="cyberpunk5" src="images/cyberpunk-street.png">
+                  <p>Become the best version of yourself</p>
+                  
               </div>
-              <div v-for="avatar in avatars">
+              <div class="stuff" v-for="avatar in avatars">
                 <div v-if="avatar_id == avatar.id">
                   <div class="container">XP: {{avatar.xp_total}}</div> 
                   <div class="container">Level: {{avatar.level}}</div> 
@@ -18,10 +19,11 @@
                   <div class="container">Gold: {{avatar.gold_total}}</div> 
                 </div>
               </div>
-              <a href="/avatarhome">avatar home</a>
+               <a href="/avatarhome">avatar home</a>
           </div>
+          <img class="skygif2" src="images/skyline.gif">
         </div> 
-        <div class="col-sm-12 col-md-8 col-lg-5">
+        <div class="col-sm-3">
           <br>
           <br>
             <h4>Current Attributes</h4>
@@ -71,6 +73,7 @@
                     </div>
                   </form>
                 </div>
+               
               </div>
             </div>
         </div>
@@ -81,6 +84,11 @@
 
 
 <style>
+
+.skygif2{
+  width: 600px;
+  height: 500px;
+}
 
   .cyberpunk5 {
     width: 350px;
