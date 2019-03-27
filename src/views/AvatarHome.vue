@@ -237,7 +237,7 @@
   }
 
   .quote{
-    padding-left: 960px;
+    padding-left: 800px;
     color: pink;
   }
 

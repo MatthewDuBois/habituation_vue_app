@@ -55,10 +55,10 @@
         <br>
         <br>
         <p>“…tomorrow and plans for tomorrow 
-        <br>can have no significance at all 
-        <br>unless you are in full contact with the reality 
-        <br>of the present, since it is in the present 
-        <br>and only in the present that you live.” 
+        can have no significance at all 
+        unless you are in full contact with the reality 
+        of the present, since it is in the present 
+        and only in the present that you live.” 
         <br>– Alan Watts.</p>
       </div>
       <h3></h3>
@@ -83,14 +83,15 @@
 }
 
 .skyline {
-  width: 400px;
-  float: left;
+  width: 700px;
+  height: 500px;
+/*  float: left;*/
 
 }
 
-/*.quote{
-  padding-right: 4px;
-}*/
+.quote{
+  padding-right: 300px;
+}
 
 .container4 {
   text-align: center;

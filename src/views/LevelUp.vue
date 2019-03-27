@@ -3,12 +3,12 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
-          <div class="col-sm-8 col-md-6 col-lg-6 intro-text-wrapper">
+          <div class="col-sm-6">
               <div class="intro-text">
                 <br>
                   <h1>Habituation</h1>
                   <p>Become the best version <br> of yourself</p>
-                  <img class="cyberpunk1" src="images/cyberpunk-street.png">
+                  <img class="cyberpunk5" src="images/cyberpunk-street.png">
               </div>
               <div v-for="avatar in avatars">
                 <div v-if="avatar_id == avatar.id">
@@ -22,6 +22,8 @@
           </div>
         </div> 
         <div class="col-sm-12 col-md-8 col-lg-5">
+          <br>
+          <br>
             <h4>Current Attributes</h4>
             <div v-for="avatar in avatars">
               <div v-if="avatar_id == avatar.id">
@@ -80,7 +82,7 @@
 
 <style>
 
-  .cyberpunk {
+  .cyberpunk5 {
     width: 350px;
   }
 

@@ -28,7 +28,7 @@
       </div>  
     </div>
 
-    <div class='container'>
+    <div class='container0'>
       <h5 v-model="newName">Create habit: </h5>
       <form v-on:submit.prevent="create()">
         <div class="new-button">
@@ -42,6 +42,9 @@
 
 
 <style>
+.container0{
+  padding-left: 300px;
+}
 .form-group2{
   width: 400px;
 }
