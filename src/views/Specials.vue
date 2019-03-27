@@ -1,9 +1,8 @@
 <template>
   <div class="specials">
-    <div class="containe">
-  
-       
-          <div class="col-lg-6 intro-text-wrapper">
+    <div class="contain2">
+    <div class="row mt-3">
+          <div class="col-sm-6 intro-text-wrapper">
               <div class="intro-text">
                 <br>
                   <h1>Habituation</h1>
@@ -41,13 +40,14 @@
               <br>
               <a href="/avatarhome">avatar home</a>
           </div>
-        </div> 
-        <div class="col-lg-5">
-          <div class="container">
+      
+        <div class="col-sm-6">
+          <div class="container8">
             <br>
+
             <h4>Attributes</h4>
             <br>
-          </div>  
+        
             <div v-for="avatar in avatars">
               <div v-if="avatar_id == avatar.id">
 
@@ -70,7 +70,7 @@
                   <h4>Mindfulness: {{avatar.mindfulness}}</h4>
                  <h5>Mindfulness increases the power of source skills, all streak bonuses are increased, slows bad habit sickness.</h5>
                 </div> 
-                  br
+                  <br>
                 <div class="container">
                   <h4>Intuition: {{avatar.intuition}}</h4>
                   <h5>Intuition gives bonuses to all skills, increases chance of random loot drops and increased gold rewards.</h5>
@@ -78,6 +78,14 @@
               </div>
             </div>
         </div>
+
+      
+    </div>
+  
+       
+
+        </div> 
+          </div>  
       </div>
     </div>
   </div>  
@@ -85,6 +93,16 @@
 
 
 <style>
+
+.contain2{
+  align-self: left;
+  padding-left: 100px;
+}
+
+.container8{
+  padding-left: 100px;
+  align-self: right;}
+ 
 
 h4{
   color: pink;
@@ -96,7 +114,7 @@ p{
 
 .progress{
   height: 50px;
-  width: 100%;
+  width: 50%;
 }
 
   .cyberpunk {
