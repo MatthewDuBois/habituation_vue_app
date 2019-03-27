@@ -1,11 +1,17 @@
 <template>
   <div class="login">
-    <div id="loader-wrapper">
+<!--     <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-    </div>  
-    <div class="container">
+    </div>  --> 
+
+    <div class="col-sm-4">
+    <div class="container-login">
+      <br>
+      <br>
+      <br>
+      <br>
       <form v-on:submit.prevent="submit()">
         <h1>Login</h1>
         <ul>
@@ -24,11 +30,34 @@
         </div>
       </form>
     </div>
+    </div>
+    <div class="pic">
+      <div class="col-sm-8">
+        <p></p>
+        <img class="skygif" src="images/skyline.gif">
+      </div>
+    </div>
   </div>
 </template>
 
 <style>
 
+.skygif{
+  width: 700px;
+  height: 500px;
+}
+
+.pic{
+ display: flex;
+ padding-left: 900px;
+
+}
+
+
+
+.container-login{
+  padding-left: 200px;
+}
   
 </style>
 

@@ -8,7 +8,7 @@
         <li v-for="error in errors"> {{ error }} </li>
       </ul>
 
-      <div class="form-group">
+      <div class="form-group2">
         <label>Name:</label> 
         <input type="text" class="form-control" v-model="newName">
       </div>
@@ -28,7 +28,7 @@
       </div>  
     </div>
 
-    <div class='container'>
+    <div class='container0'>
       <h5 v-model="newName">Create habit: </h5>
       <form v-on:submit.prevent="create()">
         <div class="new-button">
@@ -42,7 +42,10 @@
 
 
 <style>
-.form-group{
+.container0{
+  padding-left: 300px;
+}
+.form-group2{
   width: 400px;
 }
 

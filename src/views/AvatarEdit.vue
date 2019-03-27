@@ -32,9 +32,7 @@
               </div>
               <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  <p>A futurist and visionary equally at home talking quantam mechanics or meditative stillness trying to combine the formless with invented form to create a better future by improving their present.  This path is one that benefits the most from intelligence and mindfullness.  
                   </p>
                 </div>
               </div>
@@ -49,9 +47,7 @@
               </div>
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  <p>Warrior Poets are passionate and creative fighters.
                   </p>
                 </div>
               </div>
